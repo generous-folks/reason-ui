@@ -23,7 +23,6 @@ let inputStyle = [%css [
 [@react.component]
 let make = () => {
   let (checked, setChecked) = React.useState(() => false);
-  Js.log(checked);
 
   <label>
     <input type_="checkbox" className=inputStyle checked=checked onChange={(_e) => setChecked(checked => !checked)} />

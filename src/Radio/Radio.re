@@ -23,7 +23,6 @@ let inputStyle = [%css [
 [@react.component]
 let make = (~values, ~defaultValue="") => {
   let (current, setCurrent) = React.useState(() => defaultValue);
-  Js.log(current);
 
   <>
     {React.array(Array.map(value => 
