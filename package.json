@@ -21,6 +21,7 @@
     "reason-react": "^0.7.0"
   },
   "scripts": {
+    "dev": "bsb -make-world -w",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
   }
