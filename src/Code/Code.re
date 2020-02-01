@@ -1,4 +1,4 @@
-open Emotion
+open Emotion;
 
 let default = [%css [
   padding2(`rem(0.5))(`rem(1.)),
