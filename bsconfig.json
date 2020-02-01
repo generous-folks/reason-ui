@@ -1,0 +1,26 @@
+{
+  "name": "reason-ui",
+  "bs-dependencies": [
+    "reason-react",
+    "bs-storybook",
+    "@ahrefs/bs-emotion"
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "stories",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "refmt": 3,
+  "reason": {"react-jsx": 3},
+  "ppx-flags": ["@ahrefs/bs-emotion-ppx/bin/bs-emotion-ppx"]
+}

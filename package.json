@@ -4,5 +4,24 @@
   "main": "index.js",
   "repository": "git@github.com:cchampou/reason-ui.git",
   "author": "cchampou <clement@champouillon.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@ahrefs/bs-emotion-ppx": "^1.0.1",
+    "@babel/core": "^7.8.4",
+    "@storybook/addon-actions": "^5.3.9",
+    "@storybook/addon-links": "^5.3.9",
+    "@storybook/addons": "^5.3.9",
+    "@storybook/react": "^5.3.9",
+    "babel-loader": "^8.0.6",
+    "bs-platform": "^7.0.1",
+    "bs-storybook": "^0.3.0"
+  },
+  "dependencies": {
+    "@ahrefs/bs-emotion": "^1.0.1",
+    "reason-react": "^0.7.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
 }
