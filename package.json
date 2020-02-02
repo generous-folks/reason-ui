@@ -23,6 +23,7 @@
   },
   "scripts": {
     "dev": "bsb -make-world -w",
+    "build": "bsb -make-world",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
   }

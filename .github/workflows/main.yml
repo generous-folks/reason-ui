@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  Build:
+  Build Storybook:
 
     runs-on: ubuntu-latest
 
@@ -15,5 +15,7 @@ jobs:
     - uses: actions/setup-node@master
     - name: Install dependencies
       run: yarn
-    - name: Build storybook
+    - name: Build components
+      run: yarn run build
+    - name: Build Storybook
       run: yarn run build-storybook
