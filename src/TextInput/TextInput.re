@@ -68,7 +68,8 @@ let make =
       disabled
       ?name
       ?id
-      ?placeholder
+      ?onSelect
+      placeholder
     />
   </label>;
 };
