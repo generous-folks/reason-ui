@@ -22,16 +22,31 @@ let inputStyle = [%css [
   visibility(`hidden)
 ]];
 
-let getCheckedStyle = checked => switch(checked) {
-  | Some(checked) => checked ? checkStyle : ""
-  | None => ""
-};
+let getCheckedStyle = checked => checked ? checkStyle : "";
 
 [@react.component]
-let make = (~checked=?, ~onChange=?, ~disabled=false) => {
+let make = (~checked=?, ~onChange=?, ~disabled=false, ~label="") => {
+  let (internalChecked, setInternalChecked) = React.useState(() => false);
+  
+  let onChange = switch onChange {
+  | Some(changeHandler) => changeHandler
+  | None => (_e) => setInternalChecked((_c) => !internalChecked)
+  };
+
+  let checked = switch checked {
+  | Some(checked) => checked
+  | None => internalChecked
+  };
 
   <label>
-    <input type_="checkbox" className=inputStyle checked=?checked onChange=?onChange disabled=disabled />
+    <input
+      type_="checkbox"
+      className=inputStyle
+      checked=checked
+      onChange=onChange
+      disabled=disabled
+    />
     <span className=Cx.merge([| defaultStyle, getCheckedStyle(checked) |])>{React.string({js|✓|js})}</span>
+    {React.string(label)}
   </label>
 };
