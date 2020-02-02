@@ -1,14 +1,21 @@
 open Emotion;
 
-let defaultStyle = [%css []];
+let defaultStyle = [%css
+  [
+    height(`rem(1.)),
+    width(`auto),
+    fontSize(`rem(1.)),
+    padding2(`rem(0.5), `rem(1.)),
+    margin(`rem(0.3)),
+    border(`px(3), `solid, `hex("333333")),
+    borderRadius(`px(3)),
+    backgroundColor(`rgba((0, 0, 0, 0.))),
+  ]
+];
 
-let checkStyle = [%css [color(`hex("000000"))]];
+let primaryStyle = [%css [borderColor(`hex("000033"))]];
 
 let disabledStyle = [%css [opacity(0.5)]];
-
-let inputStyle = [%css [visibility(`hidden)]];
-
-let getCheckedStyle = checked => checked ? checkStyle : "";
 
 let createLabel =
   fun
@@ -25,6 +32,7 @@ let make =
       ~value=?,
       ~onChange=?,
       ~disabled=false,
+      ~primary=false,
       ~label=?,
       ~type_="text",
       ~children=React.null,
@@ -48,6 +56,12 @@ let make =
   <label className={Cx.merge([|disabled ? disabledStyle : ""|])}>
     {createLabel(label)}
     children
-    <input type_ className=defaultStyle value onChange disabled />
+    <input
+      type_
+      className={Cx.merge([|defaultStyle, primary ? primaryStyle : ""|])}
+      value
+      onChange
+      disabled
+    />
   </label>;
 };

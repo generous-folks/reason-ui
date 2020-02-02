@@ -8,5 +8,6 @@ storiesOf("TextInput", _module)
     <TextInput
       disabled={boolean(~label="Disabled", ~defaultValue=false, ())}
       label={text(~label="Label", ~defaultValue="Sushi", ())}
+      primary={boolean(~label="Primary", ~defaultValue=false, ())}
     />
   );
