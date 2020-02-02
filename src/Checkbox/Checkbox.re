@@ -2,6 +2,8 @@ open Emotion;
 
 let defaultStyle = [%css [
   border(`px(3))(`solid)(`hex("222222")),
+  position(`absolute),
+  left(`px(0)),
   borderRadius(`px(3)),
   cursor(`pointer),
   color(`hex("ffffff")),
@@ -20,12 +22,16 @@ let inputStyle = [%css [
   visibility(`hidden)
 ]];
 
+let getCheckedStyle = checked => switch(checked) {
+  | Some(checked) => checked ? checkStyle : ""
+  | None => ""
+};
+
 [@react.component]
-let make = () => {
-  let (checked, setChecked) = React.useState(() => false);
+let make = (~checked=?, ~onChange=?, ~disabled=false) => {
 
   <label>
-    <input type_="checkbox" className=inputStyle checked=checked onChange={(_e) => setChecked(checked => !checked)} />
-    <span className=Cx.merge([| defaultStyle, checked ? checkStyle : "" |])>{React.string({js|✓|js})}</span>
+    <input type_="checkbox" className=inputStyle checked=?checked onChange=?onChange disabled=disabled />
+    <span className=Cx.merge([| defaultStyle, getCheckedStyle(checked) |])>{React.string({js|✓|js})}</span>
   </label>
 };
