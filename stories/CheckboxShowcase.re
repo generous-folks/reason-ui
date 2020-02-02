@@ -1,8 +1,23 @@
 open BsStorybook.Story;
-
-let label = "Hello World";
+open BsStorybook.Knobs;
 
 let _module = [%bs.raw "module"];
 storiesOf("Checkbox", _module)
--> add("Default", () => <Checkbox label />)
--> add("Checked", () => <Checkbox checked=true label />);
+->addDecorator(withKnobs)
+->add("Default", () =>
+    <Checkbox
+      label={text(~label="Label", ~defaultValue="Click me !", ())}
+      disabled={boolean(~label="Disabled", ~defaultValue=false, ())}
+    />
+  )
+->add("Checked", () =>
+    <Checkbox
+      checked=true
+      label={text(
+        ~label="Label",
+        ~defaultValue="I am checked and controlled",
+        (),
+      )}
+      disabled={boolean(~label="Disabled", ~defaultValue=false, ())}
+    />
+  );

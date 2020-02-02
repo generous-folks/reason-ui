@@ -9,6 +9,7 @@
     "@ahrefs/bs-emotion-ppx": "^1.0.1",
     "@babel/core": "^7.8.4",
     "@storybook/addon-actions": "^5.3.9",
+    "@storybook/addon-knobs": "^5.3.10",
     "@storybook/addon-links": "^5.3.9",
     "@storybook/addons": "^5.3.9",
     "@storybook/react": "^5.3.9",

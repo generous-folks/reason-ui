@@ -1,4 +1,4 @@
 module.exports = {
   stories: ['../stories/**/*.bs.js'],
-  addons: ['@storybook/addon-actions', '@storybook/addon-links'],
+  addons: ['@storybook/addon-links', '@storybook/addon-knobs'],
 };

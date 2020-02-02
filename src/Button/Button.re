@@ -2,7 +2,7 @@ open Emotion
 
 let default = [%css [
   color(`hex("000000")),
-  padding2(`rem(0.5))(`rem(2.)),
+  padding2(`rem(0.5), `rem(2.)),
   margin(`rem(0.5)),
   borderRadius(`rem(2.)),
   fontSize(`rem(1.)),
