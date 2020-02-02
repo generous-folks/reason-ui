@@ -13,7 +13,7 @@ let defaultStyle = [%css
   ]
 ];
 
-let primaryStyle = [%css [borderColor(`hex("000033"))]];
+let primaryStyle = [%css [borderColor(`hex("000088"))]];
 
 let disabledStyle = [%css [opacity(0.5)]];
 
