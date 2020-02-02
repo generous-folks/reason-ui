@@ -2,7 +2,7 @@
   "name": "reason-ui",
   "bs-dependencies": [
     "reason-react",
-    "bs-storybook",
+    "@generous-folks/bs-storybook",
     "@ahrefs/bs-emotion"
   ],
   "sources": [
