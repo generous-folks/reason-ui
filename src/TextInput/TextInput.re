@@ -33,6 +33,7 @@ let make =
       ~onChange=?,
       ~disabled=false,
       ~primary=false,
+      ~placeholder="",
       ~label=?,
       ~type_="text",
       ~children=React.null,
@@ -62,6 +63,7 @@ let make =
       value
       onChange
       disabled
+      placeholder
     />
   </label>;
 };
