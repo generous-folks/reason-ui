@@ -35,6 +35,9 @@ let make =
       ~primary=false,
       ~placeholder="",
       ~label=?,
+      ~id=?,
+      ~name=?,
+      ~onSelect=?,
       ~type_="text",
       ~children=React.null,
     ) => {
@@ -63,7 +66,9 @@ let make =
       value
       onChange
       disabled
-      placeholder
+      ?name
+      ?id
+      ?placeholder
     />
   </label>;
 };
