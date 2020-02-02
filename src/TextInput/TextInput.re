@@ -13,7 +13,7 @@ let defaultStyle = [%css
   ]
 ];
 
-let primaryStyle = [%css [borderColor(`hex("000033"))]];
+let primaryStyle = [%css [borderColor(`hex("000088"))]];
 
 let disabledStyle = [%css [opacity(0.5)]];
 
@@ -33,7 +33,11 @@ let make =
       ~onChange=?,
       ~disabled=false,
       ~primary=false,
+      ~placeholder="",
       ~label=?,
+      ~id=?,
+      ~name=?,
+      ~onSelect=?,
       ~type_="text",
       ~children=React.null,
     ) => {
@@ -62,6 +66,10 @@ let make =
       value
       onChange
       disabled
+      ?name
+      ?id
+      ?onSelect
+      placeholder
     />
   </label>;
 };
