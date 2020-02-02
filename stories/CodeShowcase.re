@@ -1,17 +1,4 @@
-open BsStorybook.Story;
-open BsStorybook.Knobs;
+let default = {"title": "Code", "excludeStories": [|"$$default"|]};
 
-let _module = [%bs.raw "module"];
-storiesOf("Code", _module)
-->addDecorator(withKnobs)
-->add("Default", () =>
-    <Code>
-      {React.string(
-         text(
-           ~label="Content",
-           ~defaultValue="yarn add @generous-folks/reason-ui",
-           (),
-         ),
-       )}
-    </Code>
-  );
+let normal = () =>
+  <Code> {React.string("yarn add @generous-folks/reason-ui")} </Code>;

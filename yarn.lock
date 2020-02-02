@@ -1003,6 +1003,13 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@generous-folks/bs-storybook@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@generous-folks/bs-storybook/-/bs-storybook-0.0.1.tgz#7d59f33b262382a164ff6deea638d7c6770ec02f"
+  integrity sha512-mbdGXuQR4xqDEXArycIeYvgQtLP/kQIZBmcQyPg2iXUg9Dqvasc/t935Y2Wr/Icay1smWy+xlEzjmUVa13v6Zg==
+  dependencies:
+    reason-react "^0.7.0"
+
 "@icons/material@^0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
@@ -2828,13 +2835,6 @@ bs-platform@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-7.0.1.tgz#1d7b0ef6088b998dceee5db74a7cd8f01c20a3bd"
   integrity sha512-UjStdtHhbtC/l6vKJ1XRDqrPk7rFf5PLYHtRX3akDXEYVnTbN36z0g4DEr5mU8S0N945e33HYts9x+i7hKKpZQ==
-
-bs-storybook@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/bs-storybook/-/bs-storybook-0.3.0.tgz#a0f5f2f356bf1a39b0b4fd4a3933cc429c2e3911"
-  integrity sha512-FAMVnLd1nWVWLrk3+br5s+PCkJNll5fz2o+wXe4CZLQAJLNF71XxQ56HubNzYVUFVuHgNotWyjRE7wWoWQkiCg==
-  dependencies:
-    reason-react "^0.5.3"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -7409,7 +7409,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-"react-dom@>=15.0.0 || >=16.0.0", react-dom@>=16.8.1, react-dom@^16.8.3:
+react-dom@>=16.8.1, react-dom@^16.8.3:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
   integrity sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw==
@@ -7568,7 +7568,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-"react@>=15.0.0 || >=16.0.0", react@>=16.8.1, react@^16.8.3:
+react@>=16.8.1, react@^16.8.3:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
@@ -7631,14 +7631,6 @@ readdirp@^2.2.1:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
-
-reason-react@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.5.3.tgz#10601809742fd991109ec9d69ad4baf2c3f17540"
-  integrity sha512-dUkoqXrP/gOjkmkW+k/otEUP+yeXH5+QfdxNT5EW60MXM3zbCdFhbNzKBbjYOZ6x96UbxK869CObjX04BdJEDg==
-  dependencies:
-    react ">=15.0.0 || >=16.0.0"
-    react-dom ">=15.0.0 || >=16.0.0"
 
 reason-react@^0.7.0:
   version "0.7.0"
