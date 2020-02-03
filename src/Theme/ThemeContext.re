@@ -1,26 +1,70 @@
 type buttonTypes = {
+  primary: string,
+  secondary: string,
+  default: string,
+  accent: string,
   disabled: string,
-  backgroundColor: string,
+};
+
+type colors = {
+  primary: string,
+  secondary: string,
+  default: string,
+  accent: string,
+};
+
+type background = {
+  primary: string,
+  secondary: string,
+  default: string,
+  accent: string,
+  disabled: string,
+};
+
+type text = {
+  primary: string,
+  secondary: string,
+  default: string,
+  accent: string,
+  disabled: string,
 };
 
 type themeTypes = {
   mutable mode: string,
-  primary: string,
-  secondary: string,
-  accent: string,
-  textPrimary: string,
+  mutable colors,
+  mutable background,
+  mutable text,
   button: buttonTypes,
 };
 
 let theme = {
   mode: "dark",
-  primary: "000088",
-  secondary: "ffff88",
-  accent: "cccccc",
-  textPrimary: "000000",
+  colors: {
+    primary: "000088",
+    secondary: "ffff88",
+    default: "575757",
+    accent: "123456",
+  },
+  background: {
+    primary: "ffffff",
+    secondary: "000000",
+    default: "ffffff",
+    accent: "123456",
+    disabled: "fafafa",
+  },
   button: {
-    disabled: "000000",
-    backgroundColor: "000000",
+    primary: "000088",
+    secondary: "ffff88",
+    default: "ffffff",
+    accent: "123456",
+    disabled: "575757",
+  },
+  text: {
+    primary: "000088",
+    secondary: "ffff88",
+    default: "000000",
+    accent: "123456",
+    disabled: "575757",
   },
 };
 
