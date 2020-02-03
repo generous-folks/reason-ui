@@ -6,10 +6,7 @@ let make = (~primary=false, ~children) => {
 
   <button
     className={
-      Cx.merge([|
-        Css.default(~theme),
-        primary ? Css.primaryStyle(~theme) : "",
-      |])
+      Cx.merge([|Css.default(~theme), primary ? Css.primary(~theme) : ""|])
     }>
     children
   </button>;

@@ -1,43 +1,4 @@
-type buttonTypes = {
-  primary: string,
-  secondary: string,
-  default: string,
-  accent: string,
-  disabled: string,
-};
-
-type colors = {
-  primary: string,
-  secondary: string,
-  default: string,
-  accent: string,
-};
-
-type background = {
-  primary: string,
-  secondary: string,
-  default: string,
-  accent: string,
-  disabled: string,
-};
-
-type text = {
-  primary: string,
-  secondary: string,
-  default: string,
-  accent: string,
-  disabled: string,
-};
-
-type themeTypes = {
-  mutable mode: string,
-  mutable colors,
-  mutable background,
-  mutable text,
-  button: buttonTypes,
-};
-
-let theme = {
+let theme: ThemeTypes.theme = {
   mode: "dark",
   colors: {
     primary: "000088",
@@ -68,5 +29,6 @@ let theme = {
   },
 };
 
-let themeContext = React.createContext(theme: themeTypes);
+let themeContext = React.createContext(theme: ThemeTypes.theme);
+
 let useTheme = () => React.useContext(themeContext);

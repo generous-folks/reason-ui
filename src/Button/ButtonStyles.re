@@ -1,6 +1,6 @@
 open Emotion;
 
-let default = (~theme: ThemeContext.themeTypes) => [%css
+let default = (~theme: ThemeTypes.theme) => [%css
   [
     color(`hex(theme.text.default)),
     margin(`rem(0.5)),
@@ -13,7 +13,7 @@ let default = (~theme: ThemeContext.themeTypes) => [%css
   ]
 ];
 
-let primaryStyle = (~theme: ThemeContext.themeTypes) => [%css
+let primary = (~theme: ThemeTypes.theme) => [%css
   [
     color(`hex(theme.text.primary)),
     backgroundColor(`hex(theme.button.primary)),

@@ -6,7 +6,7 @@ let medium = [%css [fontSize(`rem(1.6))]];
 
 let small = [%css [fontSize(`rem(1.2))]];
 
-let default = (~theme: ThemeContext.themeTypes) => [%css
+let default = (~theme: ThemeTypes.theme) => [%css
   [
     color(`hex(theme.text.default)),
     fontFamily("Arial"),
@@ -14,6 +14,6 @@ let default = (~theme: ThemeContext.themeTypes) => [%css
   ]
 ];
 
-let primary = (~theme: ThemeContext.themeTypes) => [%css
+let primary = (~theme: ThemeTypes.theme) => [%css
   [color(`hex(theme.text.primary))]
 ];
