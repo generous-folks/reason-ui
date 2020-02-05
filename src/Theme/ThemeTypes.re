@@ -40,9 +40,9 @@ type colors = {
   common: commonColorFields,
   primary: basicColorFields,
   secondary: basicColorFields,
-  text: textColorFields,
   error: basicColorFields,
   warning: basicColorFields,
+  info: basicColorFields,
   success: basicColorFields,
   grey: basicColorFields,
 };
@@ -60,4 +60,5 @@ type theme = {
   colors,
   background,
   action: basicVariantFields,
+  text: textColorFields,
 };

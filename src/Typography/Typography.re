@@ -16,6 +16,7 @@ let getClass = size =>
 let make = (~primary=false, ~size=?, ~children) => {
   let theme = ThemeContext.useTheme();
 
+  Js.log(theme);
   <span
     className={
       Cx.merge([|
