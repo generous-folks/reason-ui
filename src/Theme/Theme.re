@@ -141,3 +141,6 @@ let dark: ThemeTypes.theme = {
     disabled: "575757",
   },
 };
+
+let lightMode: ThemeTypes.mode = Light;
+let darkMode: ThemeTypes.mode = Dark;

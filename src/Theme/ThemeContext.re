@@ -1,22 +1,32 @@
-type contextType = {
+type dispatch = ThemeTypes.actions => unit;
+
+type value = {
   lightTheme: ThemeTypes.theme,
   darkTheme: ThemeTypes.theme,
   mode: ThemeTypes.mode,
 };
 
-let initialContext: contextType = {
+type contextType = (value, dispatch);
+
+let initialValue = {
   lightTheme: Theme.light,
   darkTheme: Theme.dark,
   mode: Light,
 };
 
+let initialContext: contextType = (
+  {lightTheme: Theme.light, darkTheme: Theme.dark, mode: Light},
+  _ => ignore(),
+);
+
 let themeContext = React.createContext(initialContext);
 
 let useTheme = () => {
-  let context = React.useContext(themeContext);
+  let ({mode, lightTheme, darkTheme}, _dispatch) =
+    React.useContext(themeContext);
 
-  switch (context.mode) {
-  | Light => context.lightTheme
-  | Dark => context.darkTheme
+  switch (mode) {
+  | Light => lightTheme
+  | Dark => darkTheme
   };
 };

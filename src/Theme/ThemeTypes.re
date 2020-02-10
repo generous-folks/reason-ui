@@ -62,3 +62,7 @@ type theme = {
   action: basicVariantFields,
   text: textColorFields,
 };
+
+type actions =
+  | SetTheme(mode, theme)
+  | SetMode;

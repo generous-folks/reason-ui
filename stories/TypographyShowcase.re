@@ -6,14 +6,14 @@ let default = {
 let content = React.string("Hello World");
 
 let normal = () =>
-  <ThemeProvider value=ThemeContext.initialContext>
+  <ThemeContextProvider value=ThemeContext.initialContext>
     <Typography size=Typography.Large> content </Typography>
     <Typography size=Typography.Medium> content </Typography>
     <Typography size=Typography.Small> content </Typography>
-  </ThemeProvider>;
+  </ThemeContextProvider>;
 let primary = () =>
-  <ThemeProvider value=ThemeContext.initialContext>
+  <ThemeContextProvider value=ThemeContext.initialContext>
     <Typography primary=true size=Typography.Large> content </Typography>
     <Typography primary=true size=Typography.Medium> content </Typography>
     <Typography primary=true size=Typography.Small> content </Typography>
-  </ThemeProvider>;
+  </ThemeContextProvider>;
