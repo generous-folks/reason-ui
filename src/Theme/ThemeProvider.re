@@ -6,7 +6,7 @@ let reducer = (state: ThemeContext.value, action) =>
   };
 
 [@react.component]
-let make = (~children, ~value) => {
+let make = (~children, ~value=ThemeContext.initialValue) => {
   let (state, dispatch) = React.useReducer(reducer, value);
 
   <ThemeContextProvider value=(state, dispatch)>
