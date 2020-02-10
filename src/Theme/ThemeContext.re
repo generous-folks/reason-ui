@@ -30,3 +30,9 @@ let useTheme = () => {
   | Dark => darkTheme
   };
 };
+
+let useThemeDispatch = () => {
+  let (_, dispatch) = React.useContext(themeContext);
+
+  dispatch;
+};

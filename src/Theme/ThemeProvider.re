@@ -1,8 +1,8 @@
 let reducer = (state: ThemeContext.value, action) =>
   switch (action) {
-  | ThemeTypes.LightTheme(theme) => {...state, lightTheme: theme}
-  | ThemeTypes.DarkTheme(theme) => {...state, darkTheme: theme}
-  | ThemeTypes.Mode(mode) => {...state, mode}
+  | ThemeTypes.SetLightTheme(theme) => {...state, lightTheme: theme}
+  | ThemeTypes.SetDarkTheme(theme) => {...state, darkTheme: theme}
+  | ThemeTypes.SetMode(mode) => {...state, mode}
   };
 
 [@react.component]

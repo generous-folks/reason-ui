@@ -71,22 +71,22 @@ let light: ThemeTypes.theme = {
 };
 
 let dark: ThemeTypes.theme = {
-  mode: Light,
+  mode: Dark,
   colors: {
     common: {
       black: "000000",
       white: "ffffff",
     },
     primary: {
-      main: "1976d2",
-      light: "2196f3",
-      dark: "1526d2",
-      contrastText: "ffffff",
-    },
-    secondary: {
       main: "dc004e",
       light: "e33371",
       dark: "9a0036",
+      contrastText: "ffffff",
+    },
+    secondary: {
+      main: "1976d2",
+      light: "2196f3",
+      dark: "1526d2",
       contrastText: "ffffff",
     },
     error: {
@@ -134,8 +134,8 @@ let dark: ThemeTypes.theme = {
     disabled: "575757",
   },
   text: {
-    primary: "000088",
-    secondary: "ffff88",
+    primary: "ffff88",
+    secondary: "000088",
     default: "000000",
     hint: "123456",
     disabled: "575757",

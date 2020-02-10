@@ -64,6 +64,6 @@ type theme = {
 };
 
 type actions =
-  | LightTheme(theme)
-  | DarkTheme(theme)
-  | Mode(mode);
+  | SetLightTheme(theme)
+  | SetDarkTheme(theme)
+  | SetMode(mode);
