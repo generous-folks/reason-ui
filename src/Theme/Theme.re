@@ -5,18 +5,8 @@ let light: ThemeTypes.theme = {
       black: "000000",
       white: "ffffff",
     },
-    primary: {
-      main: "1976d2",
-      light: "2196f3",
-      dark: "1526d2",
-      contrastText: "ffffff",
-    },
-    secondary: {
-      main: "dc004e",
-      light: "e33371",
-      dark: "9a0036",
-      contrastText: "ffffff",
-    },
+    primary: Colors.indigo,
+    secondary: Colors.fuschia,
     error: {
       light: "e57373",
       main: "f44336",
@@ -77,18 +67,8 @@ let dark: ThemeTypes.theme = {
       black: "000000",
       white: "ffffff",
     },
-    primary: {
-      main: "dc004e",
-      light: "e33371",
-      dark: "9a0036",
-      contrastText: "ffffff",
-    },
-    secondary: {
-      main: "1976d2",
-      light: "2196f3",
-      dark: "1526d2",
-      contrastText: "ffffff",
-    },
+    primary: Colors.fuschia,
+    secondary: Colors.indigo,
     error: {
       light: "e57373",
       main: "f44336",
@@ -141,6 +121,3 @@ let dark: ThemeTypes.theme = {
     disabled: "575757",
   },
 };
-
-let lightMode: ThemeTypes.mode = Light;
-let darkMode: ThemeTypes.mode = Dark;
