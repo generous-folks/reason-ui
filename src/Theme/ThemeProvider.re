@@ -1,18 +1,24 @@
+type actions =
+  | LightTheme(ThemeTypes.theme)
+  | DarkTheme(ThemeTypes.theme)
+  | Mode(ThemeTypes.mode);
+
+let reducer = (state, action) =>
+  switch (action) {
+  | LightTheme(theme) => {...state, lightTheme: theme}
+  | DarkTheme(theme) => {...state, darkTheme: theme}
+  | Mode(mode) => {mode: mode}
+  };
+
 [@react.component]
 let make = (~children) => {
-  let (lightTheme, setLightTheme) = React.useState(_ => Theme.light);
-  let (darkTheme, setDarkTheme) = React.useState(_ => Theme.dark);
-  let (mode, setMode) = React.useState(_ => Theme.lightMode);
+  let (state, dispatch) =
+    React.useReducer(
+      reducer,
+      {lightTheme: Theme.light, darkTheme: Theme.light, mode: Light},
+    );
 
-  let setTheme = (~mode, ~theme) =>
-    switch (mode) {
-    | ThemeTypes.Light => setLightTheme(theme)
-    | ThemeTypes.Dark => setDarkTheme(theme)
-    };
-
-  let state: ThemeContext.value = {lightTheme, darkTheme, mode};
-
-  <ThemeContextProvider value=(state, setTheme)>
+  <ThemeContextProvider value=(state, dispatch)>
     children
   </ThemeContextProvider>;
 };

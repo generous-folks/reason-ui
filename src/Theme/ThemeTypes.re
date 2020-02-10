@@ -65,4 +65,4 @@ type theme = {
 
 type actions =
   | SetTheme(mode, theme)
-  | SetMode;
+  | SetMode(mode);
