@@ -1,6 +1,6 @@
 let default = {"title": "Button", "excludeStories": [|"$$default"|]};
 
 let primary = () =>
-  <ThemeContextProvider value=ThemeContext.initialContext>
+  <ThemeProvider value=ThemeContext.initialValue>
     <Code> {React.string("Hello")} </Code>
-  </ThemeContextProvider>;
+  </ThemeProvider>;
