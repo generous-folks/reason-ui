@@ -7,6 +7,7 @@ let default = (~theme: ThemeTypes.theme) => [%css
     borderRadius(`rem(2.)),
     fontSize(`rem(1.)),
     borderColor(`hex(theme.action.default)),
+    borderStyle(`solid),
     cursor(`pointer),
     backgroundColor(`hex(theme.background.default)),
     fontWeight(600),
