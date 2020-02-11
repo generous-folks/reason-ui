@@ -1,4 +1,8 @@
-let default = {"title": "Button", "excludeStories": [|"$$default"|]};
+let default = {
+  "title": "Button",
+  "component": Button.make,
+  "excludeStories": [|"$$default"|],
+};
 
 let primary = () =>
-  <ThemeProvider> <Code> {React.string("Hello")} </Code> </ThemeProvider>;
+  <ThemeProvider> <Button> {React.string("Hello")} </Button> </ThemeProvider>;
