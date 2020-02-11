@@ -27,3 +27,24 @@ let primary = (~theme: ThemeTypes.theme) => [%css
     hover([backgroundColor(`hex(theme.colors.primary.light))]),
   ]
 ];
+
+let secondary = (~theme: ThemeTypes.theme) => [%css
+  [
+    color(`hex(theme.colors.secondary.contrastText)),
+    borderStyle(`none),
+    backgroundColor(`hex(theme.colors.secondary.main)),
+    /* hover */
+    hover([backgroundColor(`hex(theme.colors.secondary.light))]),
+  ]
+];
+
+let disabled = (~theme: ThemeTypes.theme) => [%css
+  [
+    color(`hex(theme.colors.grey.main)),
+    borderStyle(`none),
+    backgroundColor(`hex(theme.colors.grey.light)),
+    cursor(`notAllowed),
+    /* hover */
+    hover([backgroundColor(`hex(theme.colors.grey.light))]),
+  ]
+];

@@ -1,16 +1,16 @@
 module Css = ButtonStyles;
 
-let buttonVariants: Customize.cssVariantTypes = {
+let buttonVariants: Variants.cssBasicTypes = {
   primary: Css.primary,
-  secondary: Css.primary,
+  secondary: Css.secondary,
   default: Css.default,
-  disabled: Css.primary,
+  disabled: Css.disabled,
 };
 
 [@react.component]
 let make =
     (
-      ~variant=Customize.Default,
+      ~variant=Variants.Default,
       ~onClick=_ => ignore(),
       ~className="",
       ~children,
@@ -18,7 +18,7 @@ let make =
   let theme = ThemeContext.useTheme();
 
   let currentVariantStyle =
-    Customize.getVariantType(~variant, ~cssVariants=buttonVariants, ~theme);
+    Variants.getBasicType(~variant, ~cssVariants=buttonVariants, ~theme);
 
   <button
     onClick
