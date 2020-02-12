@@ -13,22 +13,22 @@ type text = {
 let kindToText =
   fun
   | Title => {
-      color: Red(Normal),
-      weight: Fonts.Weight.Bold,
-      size: Fonts.Size.XL,
-      family: Fonts.Family.Helvetica,
+      color: `Red(`Normal),
+      weight: `Bold,
+      size: `XL,
+      family: `Helvetica,
     }
   | Subtitle => {
-      color: Green(Normal),
-      weight: Fonts.Weight.Normal,
-      size: Fonts.Size.M,
-      family: Fonts.Family.Arial,
+      color: `Green(`Normal),
+      weight: `Normal,
+      size: `M,
+      family: `Arial,
     }
   | Paragraph => {
-      color: Blue(Normal),
-      weight: Fonts.Weight.Light,
-      size: Fonts.Size.S,
-      family: Fonts.Family.Arial,
+      color: `Blue(`Normal),
+      weight: `Light,
+      size: `S,
+      family: `Arial,
     };
 
 let getCss = kind => {
