@@ -1,38 +1,5 @@
-type textStyle =
-  | Title
-  | Subtitle
-  | Paragraph;
-
-type text = {
-  color: Colors.color,
-  weight: Fonts.Weight.t,
-  size: Fonts.Size.t,
-  family: Fonts.Family.t,
-};
-
-let kindToText =
-  fun
-  | Title => {
-      color: `Red(`Normal),
-      weight: `Bold,
-      size: `XL,
-      family: `Helvetica,
-    }
-  | Subtitle => {
-      color: `Green(`Normal),
-      weight: `Normal,
-      size: `M,
-      family: `Arial,
-    }
-  | Paragraph => {
-      color: `Blue(`Normal),
-      weight: `Light,
-      size: `S,
-      family: `Arial,
-    };
-
-let getCss = kind => {
-  switch (kindToText(kind)) {
+let getCss = textStyle => {
+  switch (Theme.Typography.toComponent(textStyle)) {
   | {color, weight, size, family} => [
       Css.color(Colors.toCss(color)),
       Css.fontWeight(Fonts.Weight.toCss(weight)),
