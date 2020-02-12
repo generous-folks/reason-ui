@@ -1,4 +1,8 @@
-let default = {"title": "Checkbox", "excludeStories": [|"$$default"|]};
+let default = {
+  "title": "Checkbox",
+  "component": Checkbox.make,
+  "excludeStories": [|"$$default"|],
+};
 
 let uncontrolled = () =>
   <Checkbox disabled=false>
