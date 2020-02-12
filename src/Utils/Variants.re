@@ -1,4 +1,4 @@
-type variantTypes =
+type basicVariantTypes =
   | Primary
   | Secondary
   | Default
@@ -11,7 +11,7 @@ type cssBasicTypes = {
   disabled: (~theme: ThemeTypes.theme) => string,
 };
 
-let getBasicType = (~variant, ~cssVariants, ~theme) =>
+let getBasicVariant = (~variant, ~cssVariants, ~theme) =>
   switch (variant) {
   | Primary =>
     Customize.mergeStyles(
@@ -30,3 +30,9 @@ let getBasicType = (~variant, ~cssVariants, ~theme) =>
       ~originalClassName=cssVariants.default(~theme),
     )
   };
+
+let useBasicVariant = (~variant=Default, ~cssVariants) => {
+  let theme = ThemeContext.useTheme();
+
+  getBasicVariant(~variant, ~cssVariants, ~theme);
+};

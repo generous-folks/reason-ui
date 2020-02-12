@@ -15,17 +15,15 @@ let make =
       ~className="",
       ~children,
     ) => {
-  let theme = ThemeContext.useTheme();
-
-  let currentVariantStyle =
-    Variants.getBasicType(~variant, ~cssVariants=buttonVariants, ~theme);
+  let currentVariant =
+    Variants.useBasicVariant(~variant, ~cssVariants=buttonVariants);
 
   <button
     onClick
     className={
       Customize.mergeStyles(
         ~customClassName=className,
-        ~originalClassName=currentVariantStyle,
+        ~originalClassName=currentVariant,
       )
     }>
     children
