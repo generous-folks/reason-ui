@@ -1,11 +1,6 @@
-module Css = ButtonStyles;
+open Customize;
 
-let buttonVariants: Variants.cssBasicTypes = {
-  primary: Css.primary,
-  secondary: Css.secondary,
-  default: Css.default,
-  disabled: Css.disabled,
-};
+module Css = ButtonStyles;
 
 [@react.component]
 let make =
@@ -15,17 +10,9 @@ let make =
       ~className="",
       ~children,
     ) => {
-  let currentVariant =
-    Variants.useBasicVariant(~variant, ~cssVariants=buttonVariants);
+  let theme = ThemeContext.useTheme();
 
-  <button
-    onClick
-    className={
-      Customize.mergeStyles(
-        ~customClassName=className,
-        ~originalClassName=currentVariant,
-      )
-    }>
-    children
-  </button>;
+  let classes = Css.getClasses(variant, theme, className);
+
+  <button className=classes> children </button>;
 };

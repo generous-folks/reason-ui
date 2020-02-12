@@ -1,4 +1,1 @@
-open Emotion;
-
-let mergeStyles = (~customClassName="", ~originalClassName) =>
-  Cx.merge([|originalClassName, customClassName|]);
+let mergeStyles = Cx.merge;

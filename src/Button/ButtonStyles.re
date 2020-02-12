@@ -48,3 +48,18 @@ let disabled = (~theme: ThemeTypes.theme) => [%css
     hover([backgroundColor(`hex(theme.colors.grey.light))]),
   ]
 ];
+
+let getClasses = (variant, theme, className) => {
+  let defaultClass = default(theme);
+
+  let classByVariant =
+    Variants.(
+      switch (variant) {
+      | Primary => primary(theme)
+      | Secondary => secondary(theme)
+      | Disabled => disabled(theme)
+      | _ => ""
+      }
+    );
+  Customize.mergeStyles([|defaultClass, classByVariant, className|]);
+};
