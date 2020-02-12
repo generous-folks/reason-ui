@@ -6,14 +6,8 @@ let default = {
 let content = React.string("Hello World");
 
 let normal = () =>
-  <ThemeProvider>
-    <Typography size=Typography.Large> content </Typography>
-    <Typography size=Typography.Medium> content </Typography>
-    <Typography size=Typography.Small> content </Typography>
-  </ThemeProvider>;
-let primary = () =>
-  <ThemeProvider>
-    <Typography primary=true size=Typography.Large> content </Typography>
-    <Typography primary=true size=Typography.Medium> content </Typography>
-    <Typography primary=true size=Typography.Small> content </Typography>
-  </ThemeProvider>;
+  <React.Fragment>
+    <Typography textStyle=Typography.Title> content </Typography>
+    <Typography textStyle=Typography.Subtitle> content </Typography>
+    <Typography textStyle=Typography.Paragraph> content </Typography>
+  </React.Fragment>;
