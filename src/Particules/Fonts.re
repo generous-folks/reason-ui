@@ -21,10 +21,12 @@ module Size = {
 };
 
 module Family = {
-  type t = [ | `Helvetica | `Arial];
+  type t = [ | `Helvetica | `Arial | `Sans | `Roboto];
 
   let toCss =
     fun
     | `Helvetica => "Helvetica"
+    | `Sans => "Sans"
+    | `Roboto => "Roboto"
     | `Arial => "Arial";
 };

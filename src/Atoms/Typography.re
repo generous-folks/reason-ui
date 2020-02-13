@@ -10,35 +10,33 @@ type textStyle =
   | Subtitle
   | Paragraph;
 
-let toCss = a => {
-  switch (a) {
+let toCss =
+  fun
   | {color, fontWeight, fontSize, fontFamily} => [
       Css.color(Colors.toCss(color)),
       Css.fontWeight(Fonts.Weight.toCss(fontWeight)),
       Css.fontSize(Fonts.Size.toCss(fontSize)),
       Css.fontFamily(Fonts.Family.toCss(fontFamily)),
-    ]
-  };
-};
+    ];
 
-let toComponent: textStyle => t =
+let toComponent =
   fun
   | Title => {
-      color: `Red(`Normal),
-      fontWeight: `Bold,
+      color: `Gray(`Normal),
+      fontWeight: `Light,
       fontSize: `XL,
       fontFamily: `Helvetica,
     }
   | Subtitle => {
-      color: `Green(`Normal),
+      color: `Gray(`Dark),
       fontWeight: `Normal,
-      fontSize: `M,
+      fontSize: `L,
       fontFamily: `Arial,
     }
   | Paragraph => {
-      color: `Blue(`Normal),
+      color: `Gray(`Dark),
       fontWeight: `Light,
-      fontSize: `S,
+      fontSize: `M,
       fontFamily: `Arial,
     };
 
