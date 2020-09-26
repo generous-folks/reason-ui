@@ -1,19 +1,18 @@
 let default = {
   "title": "Typo",
-  "excludeStories": [|"$$default", "content"|],
+  "excludeStories": [|"$$default", "content", "title", "subtitle"|],
 };
 
-let content = React.string("Hello World");
+let title = React.string("Hi ReasonML");
+let subtitle = React.string("I'm really happy to present ReasonML to you");
+let content = React.string("Let's talk about our components");
 
 let normal = () =>
-  <ThemeProvider>
-    <Typography size=Typography.Large> content </Typography>
-    <Typography size=Typography.Medium> content </Typography>
-    <Typography size=Typography.Small> content </Typography>
-  </ThemeProvider>;
-let primary = () =>
-  <ThemeProvider>
-    <Typography primary=true size=Typography.Large> content </Typography>
-    <Typography primary=true size=Typography.Medium> content </Typography>
-    <Typography primary=true size=Typography.Small> content </Typography>
-  </ThemeProvider>;
+  <>
+    <Typography textStyle=Typography.Title> title </Typography>
+    <br />
+    <Typography textStyle=Typography.Subtitle> subtitle </Typography>
+    <br />
+    <Typography textStyle=Typography.Paragraph> content </Typography>
+    <br />
+  </>;

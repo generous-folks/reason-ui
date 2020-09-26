@@ -3,7 +3,7 @@
   "bs-dependencies": [
     "reason-react",
     "@generous-folks/bs-storybook",
-    "@ahrefs/bs-emotion"
+    "bs-css"
   ],
   "sources": [
     {
@@ -22,5 +22,4 @@
   "suffix": ".bs.js",
   "refmt": 3,
   "reason": {"react-jsx": 3},
-  "ppx-flags": ["@ahrefs/bs-emotion-ppx/bin/bs-emotion-ppx"]
 }
