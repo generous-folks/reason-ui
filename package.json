@@ -8,6 +8,7 @@
   "devDependencies": {
     "@ahrefs/bs-emotion-ppx": "^1.0.1",
     "@babel/core": "^7.8.4",
+    "@generous-folks/bs-storybook": "0.0.1",
     "@storybook/addon-actions": "^5.3.9",
     "@storybook/addon-knobs": "^5.3.10",
     "@storybook/addon-links": "^5.3.9",
@@ -15,7 +16,8 @@
     "@storybook/react": "^5.3.9",
     "babel-loader": "^8.0.6",
     "bs-platform": "^7.0.1",
-    "@generous-folks/bs-storybook": "0.0.1"
+    "hygen": "^5.0.3",
+    "sprintf-js": "^1.1.2"
   },
   "dependencies": {
     "@ahrefs/bs-emotion": "^1.0.1",
