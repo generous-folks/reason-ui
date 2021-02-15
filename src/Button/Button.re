@@ -1,14 +1,31 @@
 module Css = ButtonStyles;
 
+let buttonVariants: Variants.cssBasicTypes = {
+  primary: Css.primary,
+  secondary: Css.secondary,
+  default: Css.default,
+  disabled: Css.disabled,
+};
+
 [@react.component]
-let make = (~primary=false, ~children) => {
-  let theme = ThemeContext.useTheme();
+let make =
+    (
+      ~variant=Variants.Default,
+      ~onClick=_ => ignore(),
+      ~className="",
+      ~children,
+    ) => {
+  let currentVariant =
+    Variants.useBasicVariant(~variant, ~cssVariants=buttonVariants);
 
   <button
-    className={Cx.merge([|
-      Css.default(~theme),
-      primary ? Css.primary(~theme) : "",
-    |])}>
+    onClick
+    className={
+      Customize.mergeStyles(
+        ~customClassName=className,
+        ~originalClassName=currentVariant,
+      )
+    }>
     children
   </button>;
 };

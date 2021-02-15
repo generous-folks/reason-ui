@@ -20,7 +20,7 @@ let light: ThemeTypes.theme = {
   action: {
     primary: "000088",
     secondary: "ffff88",
-    default: Colors.common.white,
+    default: Colors.grey.main,
     disabled: "575757",
   },
   text: {
